@@ -1,3 +1,4 @@
+
 # ⚖️ Türk İş Hukuku Bilirkişi Raporu Asistanı (AI Agent)
 
 Bu proje, **Türk İş Hukuku** alanındaki bilirkişi raporlarını analiz etmek, emsal raporlardan öğrenmek ve **RAG (Retrieval-Augmented Generation)** tekniği kullanarak yeni rapor taslakları oluşturmak amacıyla geliştirilmiş bir yapay zeka asistanıdır.
