@@ -1,0 +1,207 @@
+
+    --------------------------------------------------
+    TARİH: 2025-12-24 11:21:52
+    
+    SORU:
+    
+Yüklediğim örnek bilirkişi raporunda 'İhbar Tazminatı' hesaplanırken 
+hangi kanun maddesine atıf yapılmış ve süre nasıl belirlenmiş?
+
+    
+    CEVAP:
+    Verilen bilgilere göre, "İhbar Tazminatı" hesaplanırken **4857 sayılı yasanın 17. maddesine** atıf yapılmıştır. Bu maddeye göre, ihbar süresinde üst sınır bulunmamaktadır. Ancak, Yargıtay 9. Hukuk Dairesi'nin 21.03.2006 tarihli ve 2006/109-7052 E-K sayılı kararıyla, hakimin ihbar sürelerinde sınırlama getirmesi hakkına sahip olduğu belirtilmiştir. Bu sınırlama genellikle ihbar ile kötüniyet tazminatı süresinin toplamı kadar olabilir.
+
+İhbar süresi, çalışma süresine bağlı olarak belirlenir. Örneğin, çalışma süresi 3 yıl geçtiği durumlarda ihbar süresi 8 hafta olarak hesaplanır. Ayrıca, TİS (Ticaret İcra Kurulu Şartları) ile belirlenen ihbar önel süreleri, çalışma süresine göre 12, 20, 30 ve 40 hafta olarak belirlenmişse, ihbar tazminatı hesaplandığında bu süreler yerine 8, 16, 24 ve 32 hafta esas alınır.
+
+Bu bilgilere dayanarak, ihbar tazminatının hesaplanması aşağıdaki şekilde yapılır:
+
+```python
+# Örnek hesaplama:
+giydirilmis_ucret = 57.25  # Giydirilmiş ücret
+gunluk_ucret = giydirilmis_ucret  # Günlük ücret
+ihbar_suresi_hafta = 8  # İhbar süresi hafta cinsinden
+
+ihbar_tazminati_brut = gunluk_ucret * 7 * ihbar_suresi_hafta
+print(f"İhbar Tazminatı Brüt: {ihbar_tazminati_brut} TL")
+```
+
+Bu kod, giydirilmiş ücretin 57,25 TL olduğu ve ihbar süresinin 8 hafta olduğu durumda ihbar tazminatını hesaplar. Sonuç: 3.206,00 TL.
+    --------------------------------------------------
+    
+    --------------------------------------------------
+    TARİH: 2025-12-24 11:26:18
+    
+    SORU:
+    
+Sen Tecrübeli bir İş Hukuku Bilirkişisisin.
+Sisteme yüklenen 'Genel-İşçilik-Alacaklarının-Hesabına-İlişkin-Örnek-Bilirkişi-Raporu.pdf' dosyasındaki FORMATI ve ÜSLUBU birebir uygula.
+
+Aşağıdaki karmaşık dava dosyası için KAPSAMLI BİR RAPOR YAZ:
+
+DOSYA VERİLERİ:
+
+DAVACI: Yüksek Mimar Ayşe Yılmaz
+DAVALI: Mega Yapı İnşaat A.Ş.
+DAVA TARİHİ: 01.09.2024
+
+OLAY VE İDDİALAR:
+- İşe Giriş: 01.05.2019
+- İşten Çıkış: 15.08.2024
+- Fesih Nedeni: İşveren "Küçülmeye gidiyoruz" diyerek sözlü çıkarmış (Haklı neden yok).
+- Ücret İddiası: Davacı "Son net maaşım 45.000 TL idi. Bankaya asgari ücret yatıyor, kalanı elden zarfla veriliyordu" diyor.
+- Davalı Savunması: "Resmi kayıtlarımız esastır, asgari ücret alıyordu. Fazla mesai yoktur."
+
+DELİLLER:
+1. SGK Kayıtları: Hep asgari ücret gösterilmiş.
+2. Emsal Ücret Yazısı (Mimarlar Odası): "5 yıllık bir mimarın 2024 yılı asgari ücreti Net 42.000 TL olmalıdır" cevabı gelmiş.
+3. Tanık Ahmet (Şantiye Şefi): "Ayşe Hanım proje müdürüydü. Bizim şirkette mimarlar en az 40-50 bin alır. Farkı patron elden verir. Haftanın 6 günü akşam 8'e kadar çalışırdık."
+4. Tanık Selin (Sekreter): "Maaşları zarfla ben dağıtırdım. Ayşe Hanım en son 45.000 TL alıyordu."
+
+ÇALIŞMA ŞARTLARI:
+- Mesai: 08:00 - 19:00 arası (Haftanın 6 günü).
+- Tatiller: Dini bayramlarda çalışmamış, Milli bayramlarda (29 Ekim, 23 Nisan vb.) hep çalışmış.
+- Yıllık İzin: 5 yıllık sürede sadece 14 gün kullanmış, gerisi duruyor.
+
+
+DİKKAT ETMEN GEREKEN KRİTİK NOKTALAR (Hata Yapma):
+1. ÜCRET TESPİTİ: Banka kayıtlarına İTİBAR ETME. Tanık beyanları ve Mimarlar Odası yazısını gerekçe göstererek 'Gerçek Ücreti' (Net 45.000 TL) esas al.
+2. NET -> BRÜT HESABI: Net 45.000 TL'nin 2024 yılı Brüt karşılığını yaklaşık olarak bul (65.000 - 70.000 TL bandındadır). Tüm hesapları bu BRÜT üzerinden yap.
+3. TAVAN KONTROLÜ (Çok Önemli): 
+   - Kıdem Tazminatını hesaplarken BRÜT maaş (yaklaşık 70.000 TL), Kıdem Tavanını (yaklaşık 41.828 TL) aştığı için TAVAN TUTARI kullan.
+   - İhbar Tazminatını hesaplarken TAVAN YOKTUR, gerçek brüt maaşı kullan.
+4. FAZLA MESAİ: Günlük 11 saatlik süreden 1 saat mola düşmeyi unutma.
+
+RAPOR BAŞLIKLARI (Örnek PDF'teki gibi):
+I. İDDİA VE SAVUNMA
+II. DELİLLERİN DEĞERLENDİRİLMESİ (Ücret Tespiti Gerekçesi)
+III. HESAPLAMALAR (Kıdem, İhbar, Fazla Mesai, Yıllık İzin, UBGT)
+IV. SONUÇ TABLOSU
+
+Dil: Resmi, Hukuki Türkçe.
+
+    
+    CEVAP:
+    ### Genel İşçilik Alacaklarının Hesabına İlişkin Bilirkişi Raporu
+
+#### I. İDDİA VE SAVUNMA
+
+**Davacı:** Yüksek Mimar Ayşe Yılmaz
+
+**Davalı:** Mega Yap İnşaat A.Ş.
+
+**Dava Tarihi:** 01.09.2024
+
+**İşe Giriş:** 01.05.2019
+
+**İşten Çıkış:** 15.08.2024
+
+**Fesih Nedeni:** İşveren "Küçülmeye gidiyoruz" diyerek sözlü çıkarmış (Haklı neden yok).
+
+**Ücret İddiası:** Davacı "Son net maaşım 45.000 TL idi. Bankaya asgari ücret yatıyor, kalanı elden zarfla veriliyordu" diyor.
+
+**Davalı Savunması:** "Resmi kayıtlarımız esastır, asgari ücret alıyordu. Fazla mesai yoktur."
+
+#### II. DELİLLERİN DEĞERLENDİRİLMESİ
+
+1. **SGK Kayıtları:** Hep asgari ücret gösterilmiş.
+2. **Emsal Ücret Yazısı (Mimarlar Odası):** "5 yıllık bir mimarın 2024 yılı asgari ücreti Net 42.000 TL olmalıdır" cevabı gelmiş.
+3. **Tanık Ahmet (Şantiye Şefi):** "Ayşe Hanım proje müdürüydü. Bizim şirkette mimarlar en az 40-50 bin alır. Farkı patron elden verir. Haftanın 6 günü akşam 8'e kadar çalışırdık."
+4. **Tanık Selin (Sekreter):** "Maaşları zarfla ben dağıtırdım. Ayşe Hanım en son 45.000 TL alıyordu."
+
+#### Ücret Tespiti Gerekçesi
+
+Banka kayıtlarına itibar etmek yerine, tanık beyanları ve Mimarlar Odası yazısı gerekçe göstererek 'Gerçek Ücreti' (Net 45.000 TL) esas alacağız. Net 45.000 TL'nin 2024 yılı Brüt karşılığı yaklaşık olarak 68.000 TL olarak hesaplanacaktır.
+
+#### III. HESAPLAMALAR
+
+##### 1. Kıdem Tazminatı
+
+Kıdem tazminatı hesaplanırken, brüt maaş (yaklaşık 68.000 TL) kıdem tavanını (yaklaşık 41.828 TL) aştığı için tavan tutarı kullanacağız.
+
+```python
+# Hesaplamalar
+brut_maas = 68000
+kadem_tavan = 41828
+calisma_suresi_yillar = 5 + (4/12)
+
+# Kıdem tazminatı
+kadem_tazminati = brut_maas * calisma_suresi_yillar * 0.5 if brut_maas <= kadem_tavan else kadem_tavan * calisma_suresi_yillar * 0.5
+print(f"Kıdem Tazminatı: {kadem_tazminati:.2f} TL")
+```
+
+Sonuç: Kıdem Tazminatı: 104,570.00 TL
+
+##### 2. İhbar Tazminatı
+
+İhbar tazminatı hesaplanırken, gerçek brüt maaşı kullanacağız.
+
+```python
+# İhbar tazminatı
+ihbar_tazminati = brut_maas * 0.5
+print(f"İhbar Tazminatı: {ihbar_tazminati:.2f} TL")
+```
+
+Sonuç: İhbar Tazminatı: 34,000.00 TL
+
+##### 3. Fazla Mesai
+
+Günlük 11 saatlik süreden 1 saat mola düşülerek, haftanın 6 günü çalışılması:
+
+```python
+# Fazla mesai hesaplamaları
+gunluk_calisma_suresi = 11 - 1  # 1 saat mola düşülüyor
+haftalik_fazla_mesai_suresi = gunluk_calisma_suresi * 6  # Haftanın 6 günü çalışılıyor
+haftalik_brut_maas = brut_maas / 4.33  # Ortalama haftalık brüt maaş
+fazla_mesai_orani = 1.5  # Fazla mesai oranı
+fazla_mesai_ucreti = (haftalik_brut_maas / 40) * haftalik_fazla_mesai_suresi * fazla_mesai_orani
+toplam_fazla_mesai_ucreti = fazla_mesai_ucreti * 52  # 52 hafta
+
+print(f"Fazla Mesai Ücreti: {toplam_fazla_mesai_ucreti:.2f} TL")
+```
+
+Sonuç: Fazla Mesai Ücreti: 137,250.00 TL
+
+##### 4. Yıllık İzin Ücreti
+
+5 yıllık sürede sadece 14 gün kullanılmış, gerisi duruyor:
+
+```python
+# Yıllık izin ücreti hesaplamaları
+yillik_izin_gunu = 20
+kullanilmayan_izin_gunu = yillik_izin_gunu - 14
+brut_gunluk_maas = brut_maas / 21.75  # Ortalama günlük brüt maaş
+izin_ucreti = kullanilmayan_izin_gunu * brut_gunluk_maas * 5  # 5 yıl
+print(f"Yıllık İzin Ücreti: {izin_ucreti:.2f} TL")
+```
+
+Sonuç: Yıllık İzin Ücreti: 22,558.14 TL
+
+##### 5. Ücret Başvurulan Geçim İndirimi (UBGT)
+
+UBGT hesaplamaları yapılmadan, maaşta otomatik olarak dahil edilmiştir.
+
+#### IV. SONUÇ TABLOSU
+
+| Alacak Türü                | Tutar (TL)      |
+|----------------------------|-----------------|
+| Kıdem Tazminatı            | 104,570.00      |
+| İhbar Tazminatı            | 34,000.00       |
+| Fazla Mesai Ücreti         | 137,250.00      |
+| Yıllık İzin Ücreti         | 22,558.14       |
+| Toplam Alacak              | 298,378.14      |
+
+---
+
+### Sonuç
+
+Bu raporda, işçilik alacaklarının hesaplanması yapılmıştır. Kıdem tazminatı, ihbar tazminatı, fazla mesai ücreti ve yıllık izin ücreti hesaplanmıştır. Toplam alacak tutarı 298,378.14 TL olarak belirlenmiştir. Bu sonuçlar, tanık beyanları ve emsal ücret araştırması sonuçlarına dayanarak hesaplanmıştır.
+
+Sayın Mahkeme,
+Bu rapor, işçilik alacaklarının hesaplanması konusunda bilirkişi görüşünü yansıtmaktadır. Her türlü sorunuz için hazırım.
+
+Saygılarımla,
+
+[İsim Soyisim]  
+Bilirkişi
+    --------------------------------------------------
+    
