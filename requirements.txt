@@ -1,0 +1,27 @@
+# Temel AI ve Model Yükleme
+torch
+transformers
+accelerate
+bitsandbytes
+scipy
+einops
+
+# RAG (Retrieval-Augmented Generation) Framework
+langchain
+langchain-community
+langchain-huggingface
+
+# Vektör Veritabanı ve Embedding
+sentence-transformers
+faiss-gpu
+chromadb
+
+# PDF ve Veri İşleme
+pypdf
+pymupdf
+pandas
+numpy
+unstructured
+
+# Arayüz (Eğer Streamlit kullanacaksan)
+streamlit
